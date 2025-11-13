@@ -8,4 +8,4 @@ sonarcloud не загружается, секрет не добавить в г
 
 
 Текущая версия сайта:
-https://hexlet-projectsfrontend-project-11.vercel.app/
+https://frontend-project-11-voracitys-projects.vercel.app/

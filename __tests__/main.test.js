@@ -1,4 +1,3 @@
-
 test('faked jest', () => {
-  expect(true).toBe(true)
-})
+  expect(true).toBe(true);
+});
