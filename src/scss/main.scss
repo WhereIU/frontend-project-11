@@ -1,0 +1,122 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+$utilities: (
+  "white-space": (
+    property: white-space,
+    class: null,
+    values: (
+      pre-line: pre-line
+    )
+  ),
+  "padding-top": (
+    property: padding-top,
+    class: padding_top,
+    values: (
+      1vh: 1vh
+    )
+  )
+);
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(135, 217, 227);
+}
+
+#rss-form {
+  color: rgb(224, 17, 17);
+}
+
+#rss-form input,
+#rss-form button {
+  padding: 0.3rem 0.5rem;
+}
+
+#rss-form button {
+  background-color: rgb(114, 221, 218);
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.header {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.769);
+  color: rgb(228, 222, 222);
+  padding: 1rem;
+}
+
+.body .column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  width: fit-content;
+  max-width: 500px;
+  font-size: 0.85rem;
+}
+
+.body .column > * {
+  margin: 0;
+  padding: 0;
+}
+
+.feedback {
+  text-align: center;
+  padding: 5px 0;
+  color: rgb(20, 17, 17);
+}
+
+h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+label {
+  visibility: hidden;
+  width: 0;
+}
+
+@media (max-width: 576px) {
+  .body {
+    padding: 1rem;
+  }
+
+  .body .column {
+    max-width: 100%;
+  }
+}
+
+@import "bootstrap";
