@@ -21,7 +21,10 @@
   "homepage": "https://github.com/WhereIU/frontend-project-11#readme",
   "dependencies": {
     "babel": "^5.8.38",
-    "bootstrap": "^5.3.8"
+    "bootstrap": "^5.3.8",
+    "i18next": "^25.6.2",
+    "lodash": "^4.17.21",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "eslint": "^8.57.1",

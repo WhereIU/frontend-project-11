@@ -32,6 +32,10 @@ html, body, #app {
   background-color: rgb(135, 217, 227);
 }
 
+#rss-url:focus{
+  border-color: blue;
+}
+
 #rss-form {
   color: rgb(224, 17, 17);
 }
@@ -39,6 +43,7 @@ html, body, #app {
 #rss-form input,
 #rss-form button {
   padding: 0.3rem 0.5rem;
+  margin-top: 1vh;
 }
 
 #rss-form button {
@@ -93,6 +98,7 @@ h1 {
   font-size: 1.2rem;
   margin-bottom: 0.25rem;
 }
+
 p {
   margin: 0;
   line-height: 1.2;
@@ -106,7 +112,7 @@ input[type="text"] {
 
 label {
   visibility: hidden;
-  width: 0;
+  position: absolute;
 }
 
 @media (max-width: 576px) {

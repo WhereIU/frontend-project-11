@@ -1,6 +1,9 @@
-import '../scss/main.scss';
+import View from './RSS-view.js';
+import Controller from './RSS-controller.js';
+import Model from './RSS-model.js';
 
-document.querySelector('#app').innerHTML = `
+const root = document.querySelector('#app');
+root.innerHTML = `
   <div class="container">
     <div class='header'>
       <a href="https://github.com/WhereIU/hexlet-projects_frontend-project-11">Исходный код</a>
@@ -14,8 +17,8 @@ document.querySelector('#app').innerHTML = `
           Это легко, это красиво.
         </p>
         <form id="rss-form">
-          <input type="text" required autofocus id="rss-url" name="url" aria-label="url" placeholder="Ссылка RSS">
-          <label for="rss-url">RSS-ссылка:</label>
+          <input type="text" required autofocus id="rss-url" name="rssUrl" aria-label="url" placeholder="Ссылка RSS">
+          <label for="rssUrl">RSS-ссылка</label>
           <button>Добавить</button>
         </form>
         <p class="padding_top-1vh">
@@ -29,3 +32,5 @@ document.querySelector('#app').innerHTML = `
     </div>
   </div>
 `;
+
+new Controller(new Model(), new View(root));
