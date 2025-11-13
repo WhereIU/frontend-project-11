@@ -5,19 +5,19 @@ export default class Controller {
     this.model = model;
     this.view = view;
     this.yup = yup;
-    this.view.urlInput.addEventListener('focus', () => this.view.changeInputBorderColor(''))
-    this.view.form.addEventListener('submit', (e) => this.handleSubmit(e))
+    this.view.urlInput.addEventListener('focus', () => this.view.changeInputBorderColor(''));
+    this.view.form.addEventListener('submit', (e) => this.handleSubmit(e));
   }
 
   handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
     this.validateUrl(e.target.elements.rssUrl.value)
       .then((v) => {
-        this.view.urlInput.value = ''
-        this.view.setFocus(this.view.urlInput)
-        this.model.push('feeds', v)
+        this.view.urlInput.value = '';
+        this.view.setFocus(this.view.urlInput);
+        this.model.push('feeds', v);
       })
-      .catch(() => this.view.changeInputBorderColor('red'))
+      .catch(() => this.view.changeInputBorderColor('red'));
   }
 
   validateUrl(url) {

@@ -6,7 +6,7 @@ const root = document.querySelector('#app');
 root.innerHTML = `
   <div class="container">
     <div class='header'>
-      <a href="https://github.com/WhereIU/hexlet-projects_frontend-project-11">Исходный код</a>
+      <a href="https://github.com/WhereIU/frontend-project-11">Исходный код</a>
     </div>
 
     <div class="body">
@@ -32,5 +32,5 @@ root.innerHTML = `
     </div>
   </div>
 `;
-
+// eslint-disable-next-line no-new
 new Controller(new Model(), new View(root));

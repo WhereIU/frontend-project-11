@@ -15,13 +15,13 @@ export default class Model {
   }
 
   push(type, value) {
-    this.state[type].push(value)
+    this.state[type].push(value);
   }
 
   isExist(type, name) {
-    const parent = this.state?.[type]
+    const parent = this.state?.[type];
     if (!parent) return false;
-    if (Array.isArray(parent)) return parent.includes(name)
+    if (Array.isArray(parent)) return parent.includes(name);
     if (typeof parent === 'object') return Object.keys(parent).includes(name);
     return parent === name;
   }
